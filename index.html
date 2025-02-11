@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Frontend Mentor | Contact form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="form-title">Conatct Us</h1>
+      <!-- <div class="form__wrapper"> -->
+      <form action="" class="form__wrapper">
+        <div class="form__section form-section--fname">
+          <label for="fname">
+            First Name <span class="required-mark">*</span></label
+          >
+          <input type="text" name="fname" id="fname" class="" />
+          <p class="error-msg">This field is required</p>
+        </div>
+        <!-- lastname section -->
+        <div class="form__section form-section--lname">
+          <label for="lname">
+            Last Name <span class="required-mark">*</span></label
+          >
+          <input type="text" name="lname" id="lname" class="" />
+          <p class="error-msg">This field is required</p>
+        </div>
+
+        <!-- email section -->
+        <div class="form__section form__section--email">
+          <label for="email"
+            >Email Address<span class="required-mark">*</span></label
+          >
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder=""
+            autocomplete="email"
+            class=""
+          />
+          <p class="error-msg">Please enter a valid email address</p>
+        </div>
+
+        <!-- query section -->
+        <div class="form__section form__section--query">
+          <p class="label">Query Type <span class="required-mark">*</span></p>
+          <fieldset>
+            <div class="query">
+              <input
+                type="radio"
+                id="query1"
+                name="query"
+                value="GeneralEnquery"
+                class="querytype"
+              />
+              <label for="query1">General Enquery</label>
+            </div>
+            <div class="query">
+              <input
+                type="radio"
+                id="query2"
+                name="query"
+                value="SupportRequest"
+                class="querytype"
+              />
+              <label for="query2">Support Request</label>
+            </div>
+          </fieldset>
+          <p class="error-msg">Please Select a query type</p>
+        </div>
+        <!-- Message Section -->
+        <div class="form__section form__section--message">
+          <label for="msg">Message <span class="required-mark">*</span></label>
+          <textarea name="msg" id="msg" class="error-border"></textarea>
+          <p class="error-msg">This field is required</p>
+        </div>
+        <div class="form__section form__section--consent">
+          <div class="consent-wrap">
+            <input
+              type="checkbox"
+              id="consent"
+              name="consent"
+              class="checkbox"
+            />
+            <label for="consent"
+              >I consent to being contacted by the team
+              <span class="required-mark">*</span></label
+            >
+          </div>
+          <p class="error-msg">
+            To submit this form, please consent to being contacted
+          </p>
+        </div>
+      </form>
+      <!-- </div> -->
+      <button id="submitBtn" class="btn" type="button">Submit</button>
+    </main>
+
+    <!-- success alert pop up section  -->
+    <div class="alert" id="successMsg">
+      <h1>
+        <img src="./assets/images/icon-success-check.svg" alt="Check Mark" />
+        Message Sent!
+      </h1>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+
+    <!-- JS File -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>
